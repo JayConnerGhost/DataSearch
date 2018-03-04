@@ -23,6 +23,20 @@
           "lib/netstandard1.3/Castle.Core.dll": {}
         }
       },
+      "FluentAssertions/5.1.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Configuration.ConfigurationManager": "4.4.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.Lightweight": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard2.0/FluentAssertions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentAssertions.dll": {}
+        }
+      },
       "Microsoft.CodeCoverage/1.0.3": {
         "type": "package",
         "compile": {
@@ -824,6 +838,18 @@
           "lib/netstandard1.5/System.ComponentModel.TypeConverter.dll": {}
         }
       },
+      "System.Configuration.ConfigurationManager/4.4.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Security.Cryptography.ProtectedData": "4.4.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll": {}
+        }
+      },
       "System.Diagnostics.Debug/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -1211,7 +1237,7 @@
           "System.Runtime": "4.3.0"
         },
         "compile": {
-          "ref/netstandard1.0/_._": {}
+          "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll": {}
         },
         "runtime": {
           "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll": {}
@@ -1402,6 +1428,21 @@
         },
         "runtime": {
           "lib/netstandard1.3/System.Runtime.Serialization.Primitives.dll": {}
+        }
+      },
+      "System.Security.Cryptography.ProtectedData/4.4.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/_._": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll": {
+            "assetType": "runtime",
+            "rid": "win"
+          }
         }
       },
       "System.Text.Encoding/4.3.0": {
@@ -1731,6 +1772,40 @@
         "build": {
           "build/netcoreapp1.0/xunit.runner.visualstudio.props": {}
         }
+      },
+      "DataSearch.Models/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/DataSearch.Models.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataSearch.Models.dll": {}
+        }
+      },
+      "DataSearch.Repositories/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "DataSearch.Models": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataSearch.Repositories.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataSearch.Repositories.dll": {}
+        }
+      },
+      "DataSearch.Services/1.0.0": {
+        "type": "project",
+        "dependencies": {
+          "DataSearch.Models": "1.0.0",
+          "DataSearch.Repositories": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/DataSearch.Services.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/DataSearch.Services.dll": {}
+        }
       }
     }
   },
@@ -1750,6 +1825,30 @@
         "lib/net45/Castle.Core.dll",
         "lib/netstandard1.3/Castle.Core.dll",
         "readme.txt"
+      ]
+    },
+    "FluentAssertions/5.1.2": {
+      "sha512": "J0GNFJGqFziZPp+fMyRg22wPN+a6Scw/KcxMpgzRxL/Obl/l6WV9nZulTUG8wydGSpPNT0d0kYS1eYfSlD1pbA==",
+      "type": "package",
+      "path": "fluentassertions/5.1.2",
+      "files": [
+        "fluentassertions.5.1.2.nupkg.sha512",
+        "fluentassertions.nuspec",
+        "lib/net45/FluentAssertions.dll",
+        "lib/net45/FluentAssertions.pdb",
+        "lib/net45/FluentAssertions.xml",
+        "lib/net47/FluentAssertions.dll",
+        "lib/net47/FluentAssertions.pdb",
+        "lib/net47/FluentAssertions.xml",
+        "lib/netstandard1.4/FluentAssertions.dll",
+        "lib/netstandard1.4/FluentAssertions.pdb",
+        "lib/netstandard1.4/FluentAssertions.xml",
+        "lib/netstandard1.6/FluentAssertions.dll",
+        "lib/netstandard1.6/FluentAssertions.pdb",
+        "lib/netstandard1.6/FluentAssertions.xml",
+        "lib/netstandard2.0/FluentAssertions.dll",
+        "lib/netstandard2.0/FluentAssertions.pdb",
+        "lib/netstandard2.0/FluentAssertions.xml"
       ]
     },
     "Microsoft.CodeCoverage/1.0.3": {
@@ -3140,6 +3239,25 @@
         "ref/xamarinwatchos10/_._",
         "system.componentmodel.typeconverter.4.3.0.nupkg.sha512",
         "system.componentmodel.typeconverter.nuspec"
+      ]
+    },
+    "System.Configuration.ConfigurationManager/4.4.0": {
+      "sha512": "gWwQv/Ug1qWJmHCmN17nAbxJYmQBM/E94QxKLksvUiiKB1Ld3Sc/eK1lgmbSjDFxkQhVuayI/cGFZhpBSodLrg==",
+      "type": "package",
+      "path": "system.configuration.configurationmanager/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net461/System.Configuration.ConfigurationManager.dll",
+        "lib/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.dll",
+        "ref/net461/System.Configuration.ConfigurationManager.xml",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.dll",
+        "ref/netstandard2.0/System.Configuration.ConfigurationManager.xml",
+        "system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+        "system.configuration.configurationmanager.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
       ]
     },
     "System.Diagnostics.Debug/4.3.0": {
@@ -5010,6 +5128,45 @@
         "system.runtime.serialization.primitives.nuspec"
       ]
     },
+    "System.Security.Cryptography.ProtectedData/4.4.0": {
+      "sha512": "cJV7ScGW7EhatRsjehfvvYVBvtiSMKgN8bOVI0bQhnF5bU7vnHVIsH49Kva7i7GWaWYvmEzkYVk1TC+gZYBEog==",
+      "type": "package",
+      "path": "system.security.cryptography.protecteddata/4.4.0",
+      "files": [
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net46/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.dll",
+        "ref/net461/System.Security.Cryptography.ProtectedData.xml",
+        "ref/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "ref/netstandard2.0/System.Security.Cryptography.ProtectedData.xml",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/win/lib/net46/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/net461/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard1.3/System.Security.Cryptography.ProtectedData.dll",
+        "runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll",
+        "system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+        "system.security.cryptography.protecteddata.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Text.Encoding/4.3.0": {
       "sha512": "BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "type": "package",
@@ -5911,10 +6068,29 @@
         "xunit.runner.visualstudio.2.3.1.nupkg.sha512",
         "xunit.runner.visualstudio.nuspec"
       ]
+    },
+    "DataSearch.Models/1.0.0": {
+      "type": "project",
+      "path": "../../DataSearch.Models/DataSearch.Models.csproj",
+      "msbuildProject": "../../DataSearch.Models/DataSearch.Models.csproj"
+    },
+    "DataSearch.Repositories/1.0.0": {
+      "type": "project",
+      "path": "../../DataSearch.Repositories/DataSearch.Repositories.csproj",
+      "msbuildProject": "../../DataSearch.Repositories/DataSearch.Repositories.csproj"
+    },
+    "DataSearch.Services/1.0.0": {
+      "type": "project",
+      "path": "../../DataSearch.Services/DataSearch.Services.csproj",
+      "msbuildProject": "../../DataSearch.Services/DataSearch.Services.csproj"
     }
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "DataSearch.Models >= 1.0.0",
+      "DataSearch.Repositories >= 1.0.0",
+      "DataSearch.Services >= 1.0.0",
+      "FluentAssertions >= 5.1.2",
       "Microsoft.NET.Test.Sdk >= 15.5.0",
       "Microsoft.NETCore.App >= 2.0.0",
       "NSubstitute >= 3.1.0",
@@ -5960,7 +6136,17 @@
       },
       "frameworks": {
         "netcoreapp2.0": {
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\development\\datasearch\\DataSearch.Models\\DataSearch.Models.csproj": {
+              "projectPath": "C:\\development\\datasearch\\DataSearch.Models\\DataSearch.Models.csproj"
+            },
+            "C:\\development\\datasearch\\DataSearch.Services\\DataSearch.Services.csproj": {
+              "projectPath": "C:\\development\\datasearch\\DataSearch.Services\\DataSearch.Services.csproj"
+            },
+            "C:\\development\\datasearch\\DataSearch.Repositories\\DataSearch.Repositories.csproj": {
+              "projectPath": "C:\\development\\datasearch\\DataSearch.Repositories\\DataSearch.Repositories.csproj"
+            }
+          }
         }
       },
       "warningProperties": {
@@ -5972,6 +6158,10 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "FluentAssertions": {
+            "target": "Package",
+            "version": "[5.1.2, )"
+          },
           "Microsoft.NET.Test.Sdk": {
             "target": "Package",
             "version": "[15.5.0, )"
