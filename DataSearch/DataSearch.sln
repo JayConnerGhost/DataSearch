@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSearch.Models", "..\Dat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSearch.Repositories", "..\DataSearch.Repositories\DataSearch.Repositories.csproj", "{C948B8C5-DBC0-4109-A667-E52887F4D3A4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataSearch.Console", "..\DataSearch.Console\DataSearch.Console.csproj", "{07F5E1D7-E8F2-484E-968C-6FAA211112BE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{C948B8C5-DBC0-4109-A667-E52887F4D3A4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C948B8C5-DBC0-4109-A667-E52887F4D3A4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C948B8C5-DBC0-4109-A667-E52887F4D3A4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{07F5E1D7-E8F2-484E-968C-6FAA211112BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{07F5E1D7-E8F2-484E-968C-6FAA211112BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{07F5E1D7-E8F2-484E-968C-6FAA211112BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{07F5E1D7-E8F2-484E-968C-6FAA211112BE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
